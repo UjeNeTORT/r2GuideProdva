@@ -1,0 +1,1 @@
+{"Title":"Disassembly","Cmd":"pd","x":0,"y":1,"w":132,"h":54},{"Title":"Stack","Cmd":"pxr@r:SP","x":131,"y":1,"w":80,"h":19},{"Title":"Hexdump","Cmd":"xc $r*16","x":131,"y":19,"w":80,"h":14},{"Title":"Strings in the whole bin","Cmd":"izzq","x":131,"y":32,"w":53,"h":23},{"Title":"Registers","Cmd":"dr","x":183,"y":32,"w":28,"h":23}
