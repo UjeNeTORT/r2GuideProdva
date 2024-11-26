@@ -42,7 +42,7 @@
 ## Где брать инфу
 
 - [Официальные доки от создателей радара](https://book.rada.re/)
-- [Гайд на ютубе, по которому я разбирался сам (англ)](https://www.youtube.com/watch?v=oW8Ey5STrPI&list=PLg_QXA4bGHpvsW-qeoi3_yhiZg8zBzNwQ)
+- [Гайд на ютубе, по которому разбирался я (англ)](https://www.youtube.com/watch?v=oW8Ey5STrPI&list=PLg_QXA4bGHpvsW-qeoi3_yhiZg8zBzNwQ)
 - [GitHub radare2](https://github.com/radareorg/radare2)
 
 ## Как скачать
@@ -77,7 +77,7 @@ WARN: Relocs has not been applied. Please use `-e bin.relocs.apply=true` or `-e 
 [0x00401040]>
 ```
 
-- WARN - я всегда его игнорил. вроде ничего критического
+- 'WARN' - я всегда его игнорил. вроде ничего критического
 - все что после ```--``` - шутка (тут они смешные кста)
 - ```[0x00401040]>``` - так вы будете общаться с r2 в момент входа
 
