@@ -327,5 +327,3 @@ INFO: Use -AA or aaaa to perform additional experimental analysis
 ## На этом все
 
 ![alt text](img/image-9.jpg)
-
-*Удачи в вашем assembler journey, увидимся в офисе Хуавея))*
