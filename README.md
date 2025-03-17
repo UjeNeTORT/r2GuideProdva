@@ -340,7 +340,10 @@ INFO: Use -AA or aaaa to perform additional experimental analysis
 Просто скачайте его и поместите в ```~/.local/share/radare2/r2panels```.
 
 ## Примеры layouts'ов
+  ### best_dbg
 ![alt text](img/image-10.jpg)
+
+  ### fav_dbg
 ![alt text](img/image-11.jpg)
 
 ## На этом все
