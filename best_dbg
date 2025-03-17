@@ -1,0 +1,1 @@
+{"Title":"Disassembly","Cmd":"pd","x":0,"y":1,"w":111,"h":32},{"Title":"Hexdump","Cmd":"xc $r*16","x":0,"y":31,"w":111,"h":24},{"Title":"Registers","Cmd":"dr","x":110,"y":1,"w":28,"h":31},{"Title":"Bit Registers","Cmd":"dr 1","x":137,"y":1,"w":63,"h":14},{"Title":"Functions","Cmd":"afl","x":137,"y":14,"w":63,"h":18},{"Title":"Stack","Cmd":"pxr@r:SP","x":110,"y":31,"w":80,"h":18}
