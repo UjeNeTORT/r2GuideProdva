@@ -62,8 +62,8 @@
 Чтобы проверить, что все ок:
 
 ```
-netort@thinkpad-x1:~$ r2
-Usage: r2 [-ACdfjLMnNqStuvwzX] [-P patch] [-p prj] [-a arch] [-b bits] [-c cmd]
+r2
+r2 [-ACdfjLMnNqStuvwzX] [-P patch] [-p prj] [-a arch] [-b bits] [-c cmd]
           [-s addr] [-B baddr] [-m maddr] [-i script] [-e k=v] file|pid|-|--|=
 
 ```
@@ -71,7 +71,7 @@ Usage: r2 [-ACdfjLMnNqStuvwzX] [-P patch] [-p prj] [-a arch] [-b bits] [-c cmd]
 ## Дизассемблируем первый файл
 
 ```
-netort@thinkpad-x1:~$ r2 <путь_до_исполняемого_файла>
+r2 <путь_до_исполняемого_файла>
 WARN: Relocs has not been applied. Please use `-e bin.relocs.apply=true` or `-e bin.cache=true` next time
  -- rip and tear until it compiles
 [0x00401040]>
@@ -82,7 +82,7 @@ WARN: Relocs has not been applied. Please use `-e bin.relocs.apply=true` or `-e 
 - ```[0x00401040]>``` - так вы будете общаться с r2 в момент входа
 
 Вписываем
-```[0x00401040]> V``` - (регистр важен!) - и у нас открывается hexdump view
+```[0x00401040]> V``` - (маленкая v т.к. регистр важен!) - и у нас открывается hexdump view
 ![hexdumpview](img/image-1.png)
 ![disasmview](img/image-2.png)
 ![dbg-view](img/image-3.png)
@@ -298,6 +298,21 @@ INFO: Use -AA or aaaa to perform additional experimental analysis
 
 *P.S. Вас заебет так делать каждый раз при перезапуске радара, поэтому [ниже я написал, как запихать это все в конфигурационный файл.](#как-сохранить-свои-пресеты)*
 
+#### 4.  Настройка layouts вручную
+Если у вас не получается изменить размеры окошек через клавиши вы можете изменить это вручную
+
+- открываете через любой редактор файл со своими сохранёнными настройками: ``` cd ~/.local/share/radare2/r2panels/```
+- переходите в нужный файл.
+  Теперь как всё это менять, чтобы всё работало. Сделаем на примере окна *Registers*
+  `{"Title":"Registers","Cmd":"dr","x":110,"y":1,"w":28,"h":31}`
+  - Нам нужно менять только
+    - ```x``` - координата *x* левого верхнего угла
+    - ```y``` - координата *y* левого верхнего угла
+    - ```w``` - высота окошка
+    - ```h``` - ширина окошка
+> Не забывайте согласовывать все ваши изменения. Если вы изменили координату окна, не забывайте изменить её размер
+Вы же не хотите дебажить дебаггер :)
+
 ### Как сохранить свои пресеты
 
 #### Настройки
@@ -309,7 +324,7 @@ INFO: Use -AA or aaaa to perform additional experimental analysis
     ```
     e stack.size=256
     e scr.theme=white2
-    e scr.layout=fav_dbg
+    e scr.layout=best_dbg
     ```
 
 То есть в него вы указываете настройки `e ...`, которые раньше писали через консоль `:`  при каждом запуске радара.
@@ -320,9 +335,13 @@ INFO: Use -AA or aaaa to perform additional experimental analysis
 
 - file -> save layout -> победа
 
-Можете загрузить мой layout: файл `fav_dbg` в репо.
+Можете загрузить мой layout: файл `best_dbg` или `fav_dbg` в репо.
 
 Просто скачайте его и поместите в ```~/.local/share/radare2/r2panels```.
+
+## Примеры layouts'ов
+![alt text](img/image-10.jpg)
+![alt text](img/image-11.jpg)
 
 ## На этом все
 
